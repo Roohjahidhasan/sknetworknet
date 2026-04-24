@@ -973,8 +973,8 @@ footer {
       <a href="#" class="active" data-page="home">Home</a>
       <a href="#" data-page="packages">Packages</a>
       <a href="#" data-page="coverage">Coverage</a>
-      <a href="#" data-page="media">🎬 Media</a>
-      <a href="#" data-page="livetv">📺 Live TV</a>
+      <a href="#" data-page="media">Media</a>
+      <a href="#" data-page="livetv">Live TV</a>
       <a href="#" data-page="speedtest">Speed Test</a>
       <a href="#" data-page="tools">Network Tools</a>
       <a href="#" data-page="support">Support</a>
@@ -1235,7 +1235,7 @@ footer {
         <span class="dot dot-green"></span>
         <div>
           <div style="font-size:14px;font-weight:600">SKNetwork NOC — Dhaka, Bangladesh</div>
-          <div style="font-size:12px;color:var(--muted)">Primary server · 2.3 km · Latency 2ms · Last result saved</div>
+          <div style="font-size:12px;color:var(--muted)">Primary server · 12.3 km · Latency 2ms · Last result saved</div>
         </div>
       </div>
     </div>
@@ -1400,10 +1400,14 @@ footer {
   </div>
 </div>
 
+
+     
 <!-- ============================================================
      PAGE: SUPPORT
      Edit CONTACT INFO in the HTML below
      ============================================================ -->
+ <!-- old to start----
+     
 <div class="page" id="page-support">
   <div class="section-pad">
     <div class="sec-label">Help Center</div>
@@ -1430,6 +1434,65 @@ footer {
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
         <div style="font-size:15px;font-weight:700;margin-bottom:4px">Contact Channels</div>
+
+           
+        end   -->
+     <!-- ============================================================
+     PAGE: SUPPORT
+     Edit CONTACT INFO in the HTML below new Add
+     ============================================================ -->
+
+     <form id="support-form"
+      action="https://formspree.io/f/mkgnndkv"
+      method="POST"
+      class="php-email-form">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">Full Name</label>
+      <input class="form-input" name="name" placeholder="আপনার নাম" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Phone</label>
+      <input class="form-input" name="phone" placeholder="01XXXXXXXXX" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Email</label>
+    <input class="form-input" type="email" name="email" placeholder="example@gmail.com" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Issue Type</label>
+    <select class="form-input" name="issue">
+      <option>Connection Problem</option>
+      <option>Slow Speed</option>
+      <option>Billing / Payment</option>
+      <option>New Connection Request</option>
+      <option>Package Upgrade</option>
+      <option>Technical Support</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Message (Bangla or English)</label>
+    <textarea class="form-input" name="message" placeholder="Describe your issue..." required></textarea>
+  </div>
+
+  <!-- Redirect after submit -->
+  <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html">
+
+  <button type="submit" class="btn btn-primary" style="width:100%;padding:13px">
+    Submit Request →
+  </button>
+
+</form>
+
+<div id="support-msg" style="text-align:center;font-size:13px;margin-top:10px"></div>
+           
         <!-- CONTACT INFO -->
         <div class="channel-card"><div class="ch-icon" style="background:rgba(0,230,118,.1)">📞</div><div><div class="ch-title">Hotline</div><div class="ch-info">01885093170<br>Available 24/7 · Bangla &amp; English</div></div></div>
         <div class="channel-card"><div class="ch-icon" style="background:rgba(37,211,102,.1)">📱</div><div><div class="ch-title">WhatsApp</div><div class="ch-info">01885093170<br>Message us anytime</div></div></div>
@@ -1659,8 +1722,8 @@ footer {
         <a href="#">Home Internet</a>
         <a href="#">Business Internet</a>
         <a href="#">Corporate / Leased Line</a>
-        <a href="#" onclick="navigate('media')">🎬 Media Server</a>
-        <a href="#" onclick="navigate('livetv')">📺 Live TV</a>
+        <a href="#" onclick="navigate('media')">Media Server</a>
+        <a href="#" onclick="navigate('livetv')">Live TV</a>
         <a href="#">IP Telephony</a>
         <a href="#">Data Center</a>
       </div>
@@ -2198,8 +2261,8 @@ function initStatusPage() {
 }
 
 /* ============================================================
-   SUPPORT FORM — Fake submit handler
-   ============================================================ */
+   SUPPORT FORM — Fake submit handler old
+   ============================================================ 
 function submitSupport() {
   const msg = document.getElementById('support-msg');
   msg.style.color = 'var(--green)';
@@ -2207,6 +2270,12 @@ function submitSupport() {
   setTimeout(() => { msg.textContent = ''; }, 5000);
 }
 
+     ============================================================
+   SUPPORT FORM — Fake submit handler new
+   ============================================================ */
+
+
+     
 /* ============================================================
    MEDIA SERVERS DATA
    ✏️ CUSTOMIZE: Edit the 'name', 'url', 'type', 'category', 'desc' fields
