@@ -1640,9 +1640,19 @@ footer {
       <span style="font-size:20px">ℹ️</span>
       <div><strong>Live Tv 📺 Link Here:</strong> These servers are hosted on SK Network's internal infrastructure. Subscribers get blazing download speeds — no bandwidth counting on most plans. Click any server to open it in a new tab.</div>
     </div>
+
+
+          <!-- Server Cards -->
+    <div class="server-grid" id="server-grid"><!-- Rendered by JS --></div>
+       
     <!-- Category Tabs -->
     <div class="media-tabs">
       <button class="media-tab active" onclick="filterServers('all',this)">All Servers</button>
+      <button class="media-tab" onclick="filterServers('ftp',this)">📁 FTP</button>
+      <button class="media-tab" onclick="filterServers('movies',this)">🎥 Movies</button>
+      <button class="media-tab" onclick="filterServers('music',this)">🎵 Music</button>
+      <button class="media-tab" onclick="filterServers('software',this)">💿 Software</button>
+      <button class="media-tab" onclick="filterServers('games',this)">🎮 Games</button>
     </div>
        
     <!-- Server Cards -->
